@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparky Chat Application - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .home-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .home-header {
+            background-color: #0071dc;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-title {
+            color: #0071dc;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .card-description {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .card-link {
+            display: inline-block;
+            background-color: #0071dc;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .card-link:hover {
+            background-color: #005bb8;
+        }
+        
+        .section-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #0071dc;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <div class="home-header">
+            <h1>Sparky Chat Application</h1>
+            <p>Ad Integration Demo</p>
+        </div>
+        
+        <h2 class="section-title">Customer Journey Stages</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3 class="card-title">Explore Stage</h3>
+                <p class="card-description">Initial product discovery and exploration in the chat interface.</p>
+                <a href="explore_stage_mock.html" class="card-link">View Demo</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Learn Stage</h3>
+                <p class="card-description">Detailed product information and comparisons.</p>
+                <a href="learn_stage_mock.html" class="card-link">View Demo</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Evaluate Stage</h3>
+                <p class="card-description">Product evaluation with reviews and expert opinions.</p>
+                <a href="evaluate_stage_mock.html" class="card-link">View Demo</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Buy Stage</h3>
+                <p class="card-description">Purchase flow integration within the chat experience.</p>
+                <a href="buy_stage_mock.html" class="card-link">View Demo</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Post-Transaction Stage</h3>
+                <p class="card-description">Post-purchase support and additional offers.</p>
+                <a href="post_transaction_stage_mock.html" class="card-link">View Demo</a>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Innovative Ad Formats</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3 class="card-title">Sponsored Followups</h3>
+                <p class="card-description">Contextual sponsored follow-up suggestions.</p>
+                <a href="innovative_format_1_sponsored_followups.html" class="card-link">View Demo</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Interactive Comparison</h3>
+                <p class="card-description">Interactive product comparison experiences.</p>
+                <a href="innovative_format_2_interactive_comparison.html" class="card-link">View Demo</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Conversational Brand Personas</h3>
+                <p class="card-description">Brand personas with conversational capabilities.</p>
+                <a href="innovative_format_3_conversational_brand_personas.html" class="card-link">View Demo</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Immersive Experiences</h3>
+                <p class="card-description">Rich, immersive ad experiences within chat.</p>
+                <a href="innovative_format_4_immersive_experiences.html" class="card-link">View Demo</a>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Documentation</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3 class="card-title">Innovative Ad Formats Overview</h3>
+                <p class="card-description">Summary of innovative ad format concepts.</p>
+                <a href="innovative_ad_formats_overview.html" class="card-link">View Document</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Future Ad Formats Report</h3>
+                <p class="card-description">Detailed report on future advertising formats.</p>
+                <a href="future_ad_formats_report.html" class="card-link">View Document</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
