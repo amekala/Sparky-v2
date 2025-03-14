@@ -30,14 +30,6 @@
             top: 0;
             z-index: 100;
         }
-        .back-arrow {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            color: white;
-            font-size: 1.5em;
-            text-decoration: none;
-        }
         .chat-container {
             padding: 15px;
             overflow-y: auto;
@@ -110,32 +102,130 @@
             clear: both;
             display: table;
         }
-        
-        /* Conversation starters */
-        .conversation-starters {
+        /* Ad Components */
+        .sponsored-prompts {
             display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
             margin: 15px 0;
         }
-        .starter-card {
-            flex: 1 1 calc(50% - 12px);
-            min-width: 180px;
-            background-color: #fff;
+        .sponsored-prompt {
+            min-width: 150px;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #e0e0e0;
             border-radius: 12px;
-            padding: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             text-align: center;
-            font-size: 0.95em;
             cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        .sponsored-label {
+        .sponsored-prompt:hover {
+            border-color: #0071dc;
+        }
+        .sponsored-tag {
             font-size: 0.7em;
-            color: #999;
+            color: #888;
             margin-top: 5px;
             display: block;
         }
-        
+        .sponsored-collection {
+            background-color: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+        .collection-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+        }
+        .collection-title {
+            font-weight: bold;
+            flex-grow: 1;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .product-item {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+        }
+        .product-image {
+            height: 80px;
+            width: 80px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: #888;
+        }
+        .product-name {
+            font-size: 0.8em;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .product-price {
+            font-size: 0.8em;
+            color: #0071dc;
+            font-weight: bold;
+        }
+        .trending-list {
+            background-color: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+        .trending-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .trending-icon {
+            margin-right: 5px;
+            color: #ff6b01;
+        }
+        .trending-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .trending-item:last-child {
+            border-bottom: none;
+        }
+        .trending-number {
+            font-weight: bold;
+            color: #888;
+            margin-right: 10px;
+            min-width: 20px;
+        }
+        .trending-text {
+            flex-grow: 1;
+        }
         /* Additional page-specific styles */
         .ad-carousel {
             background-color: #f8f8f8;
@@ -233,42 +323,43 @@
 </head>
 <body>
     <div class="container">
+        <div class="overlay"></div>
+        <div class="navigation">
+            <div class="nav-header">
+                <span>Sparky Menu</span>
+                <span class="nav-close">&times;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore_stage_mock.html">Explore Stage</a></li>
+                <li><a href="learn_stage_mock.html">Learn Stage</a></li>
+                <li><a href="evaluate_stage_mock.html">Evaluate Stage</a></li>
+                <li><a href="buy_stage_mock.html">Buy Stage</a></li>
+                <li><a href="post_transaction_stage_mock.html">Post-Transaction Stage</a></li>
+                <li><a href="innovative_format_1_sponsored_followups.html">Sponsored Followups</a></li>
+                <li><a href="innovative_format_2_interactive_comparison.html">Interactive Comparison</a></li>
+                <li><a href="innovative_format_3_conversational_brand_personas.html">Brand Personas</a></li>
+                <li><a href="innovative_format_4_immersive_experiences.html">Immersive Experiences</a></li>
+            </ul>
+        </div>
+        
         <div class="header">
             <a href="index.html" class="back-arrow">←</a>
-            Sparky - Explore Stage
+            <h1 class="page-title">Sparky - Explore Stage</h1>
         </div>
         <div class="chat-container">
             <!-- Initial greeting -->
             <div class="message bot-message">
                 <div class="bot-avatar">S</div>
-                Hi there! I'm Sparky, your Walmart shopping assistant. How can I help you today?
-                <div class="message-time">10:30 AM</div>
-            </div>
-            <div class="clearfix"></div>
-            
-            <!-- Conversation starters -->
-            <div class="conversation-starters">
-                <div class="starter-card">
-                    What's trending now? 🔍
-                </div>
-                <div class="starter-card">
-                    Seasonal favorites? 🌞
-                </div>
-                <div class="starter-card">
-                    Looking for gift ideas? 🎁
-                    <span class="sponsored-label">Sponsored Ad</span>
-                </div>
-                <div class="starter-card">
-                    Summer essentials? ☀️
-                    <span class="sponsored-label">Sponsored Ad</span>
-                </div>
+                Hello! I'm Sparky, your shopping assistant. How can I help you today?
+                <div class="message-time">2:30 PM</div>
             </div>
             <div class="clearfix"></div>
             
             <!-- User query -->
             <div class="message user-message">
                 I'm looking for a new TV
-                <div class="message-time">10:31 AM</div>
+                <div class="message-time">2:31 PM</div>
             </div>
             <div class="clearfix"></div>
             
@@ -281,14 +372,14 @@
                     <li>Do you have a preference for OLED, QLED, or LED?</li>
                     <li>What's your budget range?</li>
                 </ol>
-                <div class="message-time">10:31 AM</div>
+                <div class="message-time">2:31 PM</div>
             </div>
             <div class="clearfix"></div>
             
             <!-- User response -->
             <div class="message user-message">
                 I'm thinking around 65 inches and I don't know much about the different types. My budget is about $1500
-                <div class="message-time">10:32 AM</div>
+                <div class="message-time">2:32 PM</div>
             </div>
             <div class="clearfix"></div>
             
@@ -305,7 +396,7 @@
                 </ul>
                 
                 Based on your budget, I'd recommend looking at premium LED or entry-level QLED models. These offer excellent picture quality while staying within your price range.
-                <div class="message-time">10:33 AM</div>
+                <div class="message-time">2:33 PM</div>
             </div>
             <div class="clearfix"></div>
             
@@ -339,7 +430,7 @@
                         <div class="item-price">$1,099.99</div>
                     </div>
                 </div>
-                <span class="sponsored-label">Sponsored Ad</span>
+                <span class="sponsored-tag">Sponsored by Samsung and Sony</span>
             </div>
             <div class="clearfix"></div>
             
@@ -347,14 +438,14 @@
             <div class="message bot-message">
                 <div class="bot-avatar">S</div>
                 These are some of the most popular options right now. Would you like me to tell you more about any specific model? Or would you prefer to narrow down by specific features like gaming performance, smart TV capabilities, or picture quality?
-                <div class="message-time">10:34 AM</div>
+                <div class="message-time">2:34 PM</div>
             </div>
             <div class="clearfix"></div>
             
             <!-- User response -->
             <div class="message user-message">
                 Tell me more about the Samsung QLED. I'll mainly be using it for streaming movies and sports.
-                <div class="message-time">10:35 AM</div>
+                <div class="message-time">2:35 PM</div>
             </div>
             <div class="clearfix"></div>
             
@@ -376,7 +467,7 @@
                     <div class="action-button primary-button">See Details</div>
                     <div class="action-button secondary-button">Compare Models</div>
                 </div>
-                <span class="sponsored-label">Sponsored Ad</span>
+                <span class="sponsored-tag">Information provided by Samsung</span>
             </div>
             <div class="clearfix"></div>
             
@@ -384,14 +475,14 @@
             <div class="message bot-message">
                 <div class="bot-avatar">S</div>
                 Would you like me to also tell you about other QLED options, or would you prefer to learn more about the Samsung Q60B's specific features for movie watching and sports?
-                <div class="message-time">10:36 AM</div>
+                <div class="message-time">2:36 PM</div>
             </div>
             <div class="clearfix"></div>
             
             <!-- User response -->
             <div class="message user-message">
                 I'd like to compare it with the Sony option you mentioned
-                <div class="message-time">10:37 AM</div>
+                <div class="message-time">2:37 PM</div>
             </div>
             <div class="clearfix"></div>
             
@@ -401,7 +492,7 @@
                 I'd be happy to compare the Samsung Q60B QLED with the Sony X80K LED TV for you. They're both excellent options with different strengths.
                 
                 Would you like me to provide a detailed side-by-side comparison of their specifications, or would you prefer to focus on specific aspects like picture quality, smart features, or design?
-                <div class="message-time">10:38 AM</div>
+                <div class="message-time">2:38 PM</div>
             </div>
             <div class="clearfix"></div>
         </div>
