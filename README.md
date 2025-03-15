@@ -1,6 +1,6 @@
 # Sparky-v2
 
-Hey there! 👋 This is Abhi's collection of low-fidelity mocks exploring how ads could naturally fit into shopping conversations with a digital assistant. Think of it as a sneak peek into how we can make product recommendations feel more like helpful suggestions from a knowledgeable friend!
+Sparky is a demonstration of ad integration concepts in a conversational chat application. This project showcases various ad formats and integration techniques across different stages of the customer journey.
 
 ## Overview
 
@@ -9,9 +9,10 @@ This project contains mockups and visualizations of different ad integration app
 ## Pages and Features
 
 ### Home Page
-- Central navigation hub to all mock pages
+- Central navigation hub to all demo pages
 - Overview of the different customer journey stages
 - Links to innovative ad format examples
+- Access to documentation
 
 ### Customer Journey Stages
 1. **Explore Stage**: Initial product discovery and exploration
@@ -25,6 +26,10 @@ This project contains mockups and visualizations of different ad integration app
 2. **Interactive Comparison**: Interactive product comparison experiences
 3. **Conversational Brand Personas**: Brand personas with conversational capabilities
 4. **Immersive Experiences**: Rich, immersive ad experiences within chat
+
+### Documentation
+- **Innovative Ad Formats Overview**: Summary of innovative ad format concepts
+- **Future Ad Formats Report**: Detailed report on future advertising formats
 
 ## Project Structure
 
@@ -43,7 +48,9 @@ This project contains mockups and visualizations of different ad integration app
 ├── innovative_format_1_sponsored_followups.html
 ├── innovative_format_2_interactive_comparison.html
 ├── innovative_format_3_conversational_brand_personas.html
-└── innovative_format_4_immersive_experiences.html
+├── innovative_format_4_immersive_experiences.html
+├── innovative_ad_formats_overview.html
+└── future_ad_formats_report.html
 ```
 
 ## Getting Started
