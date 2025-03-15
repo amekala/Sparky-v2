@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sparky - Explore Stage</title>
-    <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -226,273 +225,140 @@
         .trending-text {
             flex-grow: 1;
         }
-        /* Additional page-specific styles */
-        .ad-carousel {
-            background-color: #f8f8f8;
-            border-radius: 10px;
-            padding: 10px;
-            margin: 15px 0;
-            position: relative;
-        }
-        
-        .carousel-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .carousel-container {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-            padding-bottom: 5px;
-            scroll-behavior: smooth;
-        }
-        
-        .carousel-item {
-            min-width: 140px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .item-image {
-            height: 100px;
-            background-color: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .item-name {
-            padding: 8px;
-            font-size: 0.8em;
-            font-weight: bold;
-        }
-        
-        .item-price {
-            padding: 0 8px 8px 8px;
-            font-size: 0.8em;
-            color: #0071dc;
-        }
-        
-        .discovery-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .discovery-card-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .discovery-card-content {
-            font-size: 0.9em;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        
-        .discovery-action-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .action-button {
-            flex: 1;
-            padding: 8px 0;
-            border: 1px solid #0071dc;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 0.8em;
-            cursor: pointer;
-        }
-        
-        .primary-button {
-            background-color: #0071dc;
-            color: white;
-        }
-        
-        .secondary-button {
-            background-color: white;
-            color: #0071dc;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="overlay"></div>
-        <div class="navigation">
-            <div class="nav-header">
-                <span>Sparky Menu</span>
-                <span class="nav-close">&times;</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="explore_stage_mock.html">Explore Stage</a></li>
-                <li><a href="learn_stage_mock.html">Learn Stage</a></li>
-                <li><a href="evaluate_stage_mock.html">Evaluate Stage</a></li>
-                <li><a href="buy_stage_mock.html">Buy Stage</a></li>
-                <li><a href="post_transaction_stage_mock.html">Post-Transaction Stage</a></li>
-                <li><a href="innovative_format_1_sponsored_followups.html">Sponsored Followups</a></li>
-                <li><a href="innovative_format_2_interactive_comparison.html">Interactive Comparison</a></li>
-                <li><a href="innovative_format_3_conversational_brand_personas.html">Brand Personas</a></li>
-                <li><a href="innovative_format_4_immersive_experiences.html">Immersive Experiences</a></li>
-            </ul>
-        </div>
-        
         <div class="header">
-            <a href="index.html" class="back-arrow">←</a>
-            <h1 class="page-title">Sparky - Explore Stage</h1>
+            <h2>Sparky</h2>
         </div>
         <div class="chat-container">
             <!-- Initial greeting -->
             <div class="message bot-message">
                 <div class="bot-avatar">S</div>
-                Hello! I'm Sparky, your shopping assistant. How can I help you today?
-                <div class="message-time">2:30 PM</div>
+                Hi there! I'm Sparky, your Walmart shopping assistant. How can I help you today?
+                <div class="message-time">10:30 AM</div>
             </div>
             <div class="clearfix"></div>
             
-            <!-- User query -->
+            <!-- Sponsored conversation starters (Explore Stage) -->
+            <div class="sponsored-prompts">
+                <div class="sponsored-prompt">
+                    <span>Looking for gift ideas? 🎁</span>
+                    <span class="sponsored-tag">Sponsored by Hallmark</span>
+                </div>
+                <div class="sponsored-prompt">
+                    <span>Home refresh ideas 🏠</span>
+                    <span class="sponsored-tag">Sponsored by Better Homes</span>
+                </div>
+                <div class="sponsored-prompt">
+                    <span>Summer grilling tips 🔥</span>
+                    <span class="sponsored-tag">Sponsored by Weber</span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            
+            <!-- User selects a sponsored prompt -->
             <div class="message user-message">
-                I'm looking for a new TV
-                <div class="message-time">2:31 PM</div>
+                Looking for gift ideas
+                <div class="message-time">10:31 AM</div>
             </div>
             <div class="clearfix"></div>
             
-            <!-- Bot response with discovery questions -->
+            <!-- Bot response with sponsored collection -->
             <div class="message bot-message">
                 <div class="bot-avatar">S</div>
-                Great! I can help you find the perfect TV. To help narrow down the options, could you tell me:
-                <ol>
-                    <li>What size TV are you looking for?</li>
-                    <li>Do you have a preference for OLED, QLED, or LED?</li>
-                    <li>What's your budget range?</li>
-                </ol>
-                <div class="message-time">2:31 PM</div>
+                I'd be happy to help you find the perfect gift! What's the occasion and who are you shopping for?
+                <div class="message-time">10:31 AM</div>
             </div>
             <div class="clearfix"></div>
             
             <!-- User response -->
             <div class="message user-message">
-                I'm thinking around 65 inches and I don't know much about the different types. My budget is about $1500
-                <div class="message-time">2:32 PM</div>
+                It's for my mom's birthday next week. She loves cooking and gardening.
+                <div class="message-time">10:32 AM</div>
             </div>
             <div class="clearfix"></div>
             
-            <!-- Bot educational response + subtle ad integration -->
+            <!-- Bot response with sponsored collection -->
             <div class="message bot-message">
                 <div class="bot-avatar">S</div>
-                Thanks for that information! For a 65-inch TV in the $1500 range, you have several great options.
-                
-                Let me briefly explain the different types:
-                <ul>
-                    <li><strong>LED</strong>: Most common and affordable option with good brightness.</li>
-                    <li><strong>QLED</strong>: Samsung's technology that offers enhanced color and brightness over standard LED.</li>
-                    <li><strong>OLED</strong>: Premium option with perfect blacks and contrast, but typically starts higher than your budget.</li>
-                </ul>
-                
-                Based on your budget, I'd recommend looking at premium LED or entry-level QLED models. These offer excellent picture quality while staying within your price range.
-                <div class="message-time">2:33 PM</div>
+                Great! For someone who loves cooking and gardening, I have some wonderful gift ideas. Here are some popular options:
+                <div class="message-time">10:32 AM</div>
             </div>
             <div class="clearfix"></div>
             
-            <!-- Sponsored carousel (Explore Stage) -->
-            <div class="ad-carousel">
-                <div class="carousel-title">Popular 65" TVs in Your Budget</div>
-                <div class="carousel-container">
-                    <div class="carousel-item">
-                        <div class="item-image">Samsung Q60B</div>
-                        <div class="item-name">Samsung 65" Q60B QLED</div>
-                        <div class="item-price">$1,299.99</div>
+            <!-- Sponsored collection (Explore Stage) -->
+            <div class="sponsored-collection">
+                <div class="collection-header">
+                    <div class="brand-logo">KA</div>
+                    <div class="collection-title">KitchenAid Cooking Essentials</div>
+                </div>
+                <div>Perfect gifts for cooking enthusiasts like your mom!</div>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <div class="product-image">Stand Mixer</div>
+                        <div class="product-name">KitchenAid Stand Mixer</div>
+                        <div class="product-price">$279.99</div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="item-image">Sony X80K</div>
-                        <div class="item-name">Sony 65" X80K LED</div>
-                        <div class="item-price">$1,199.99</div>
+                    <div class="product-item">
+                        <div class="product-image">Food Processor</div>
+                        <div class="product-name">KitchenAid Food Processor</div>
+                        <div class="product-price">$129.99</div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="item-image">LG NANO</div>
-                        <div class="item-name">LG 65" NANO Series</div>
-                        <div class="item-price">$1,349.99</div>
+                    <div class="product-item">
+                        <div class="product-image">Blender</div>
+                        <div class="product-name">KitchenAid Blender</div>
+                        <div class="product-price">$99.99</div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="item-image">Hisense U8H</div>
-                        <div class="item-name">Hisense 65" U8H QLED</div>
-                        <div class="item-price">$1,399.99</div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="item-image">TCL 6-Series</div>
-                        <div class="item-name">TCL 65" 6-Series QLED</div>
-                        <div class="item-price">$1,099.99</div>
+                    <div class="product-item">
+                        <div class="product-image">Hand Mixer</div>
+                        <div class="product-name">KitchenAid Hand Mixer</div>
+                        <div class="product-price">$49.99</div>
                     </div>
                 </div>
-                <span class="sponsored-tag">Sponsored by Samsung and Sony</span>
+                <span class="sponsored-tag">Sponsored by KitchenAid</span>
             </div>
             <div class="clearfix"></div>
             
-            <!-- Continuation of bot conversation -->
+            <!-- Bot continues with organic suggestions -->
             <div class="message bot-message">
                 <div class="bot-avatar">S</div>
-                These are some of the most popular options right now. Would you like me to tell you more about any specific model? Or would you prefer to narrow down by specific features like gaming performance, smart TV capabilities, or picture quality?
-                <div class="message-time">2:34 PM</div>
+                For gardening enthusiasts, here are some trending gift ideas that people are loving right now:
+                <div class="message-time">10:33 AM</div>
             </div>
             <div class="clearfix"></div>
             
-            <!-- User response -->
-            <div class="message user-message">
-                Tell me more about the Samsung QLED. I'll mainly be using it for streaming movies and sports.
-                <div class="message-time">2:35 PM</div>
-            </div>
-            <div class="clearfix"></div>
-            
-            <!-- Brand discovery card (Explore Stage) -->
-            <div class="discovery-card">
-                <div class="discovery-card-title">Samsung Q60B 65" QLED TV</div>
-                <div class="discovery-card-content">
-                    The Samsung Q60B QLED TV is an excellent choice for streaming movies and sports. It features:
-                    <ul>
-                        <li>Quantum Dot technology for vibrant colors</li>
-                        <li>Motion Xcelerator for smooth action in sports</li>
-                        <li>4K upscaling to enhance non-4K content</li>
-                        <li>Tizen smart platform with all major streaming apps</li>
-                        <li>Multiple HDMI ports for all your devices</li>
-                    </ul>
-                    With your $1500 budget, this TV offers premium features while staying affordable.
+            <!-- AI-curated trending items (Explore Stage) -->
+            <div class="trending-list">
+                <div class="trending-header">
+                    <span class="trending-icon">🔥</span> Trending Gardening Gifts
                 </div>
-                <div class="discovery-action-buttons">
-                    <div class="action-button primary-button">See Details</div>
-                    <div class="action-button secondary-button">Compare Models</div>
+                <div class="trending-item">
+                    <div class="trending-number">1</div>
+                    <div class="trending-text">Ergonomic Garden Tool Set - Perfect for reducing strain during long gardening sessions</div>
                 </div>
-                <span class="sponsored-tag">Information provided by Samsung</span>
+                <div class="trending-item">
+                    <div class="trending-number">2</div>
+                    <div class="trending-text">Self-Watering Planters - Great for busy plant lovers</div>
+                </div>
+                <div class="trending-item">
+                    <div class="trending-number">3</div>
+                    <div class="trending-text">Herb Garden Starter Kit - Fresh herbs year-round</div>
+                </div>
+                <div class="trending-item">
+                    <div class="trending-number">4</div>
+                    <div class="trending-text">Garden-to-Table Cookbook - Combines her love of cooking and gardening</div>
+                </div>
+                <span class="sponsored-tag">Curated by Sparky</span>
             </div>
             <div class="clearfix"></div>
             
-            <!-- Continuation of conversation -->
+            <!-- Bot follow-up question -->
             <div class="message bot-message">
                 <div class="bot-avatar">S</div>
-                Would you like me to also tell you about other QLED options, or would you prefer to learn more about the Samsung Q60B's specific features for movie watching and sports?
-                <div class="message-time">2:36 PM</div>
-            </div>
-            <div class="clearfix"></div>
-            
-            <!-- User response -->
-            <div class="message user-message">
-                I'd like to compare it with the Sony option you mentioned
-                <div class="message-time">2:37 PM</div>
-            </div>
-            <div class="clearfix"></div>
-            
-            <!-- Bot response leading to next stage -->
-            <div class="message bot-message">
-                <div class="bot-avatar">S</div>
-                I'd be happy to compare the Samsung Q60B QLED with the Sony X80K LED TV for you. They're both excellent options with different strengths.
-                
-                Would you like me to provide a detailed side-by-side comparison of their specifications, or would you prefer to focus on specific aspects like picture quality, smart features, or design?
-                <div class="message-time">2:38 PM</div>
+                Would you like me to show you more details about any of these gift ideas? Or would you prefer something in a specific price range?
+                <div class="message-time">10:34 AM</div>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -501,7 +367,5 @@
             <button class="send-button">➤</button>
         </div>
     </div>
-    
-    <script src="js/main.js"></script>
 </body>
 </html>
